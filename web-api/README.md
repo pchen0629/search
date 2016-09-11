@@ -6,25 +6,30 @@ It acts as a bridge between clients and elastic search server. The controller dy
 
 
 ##Endpoints
-### DMA Search GET /solr-dsaa/dmalive/select
-This method mimics solr response so that client could keep existing logic to interact as a solr client
-* Required param:
-** q: search text
-** fl: fields of result, must contain dsaa_guid
-* Optional param:
-rows: max number of results
+### DMA Search: GET /solr-dsaa/dmalive/select
+This endpoint mimics solr response so that client could keep existing logic to interact as a solr client
 
-### MA/DMC All index search GET /search-engine/v1/search/{client}/all
-This method returns search result from all indexes (movie, cast, genre, video)
-* Required param:
-query: search string
-* Optional param:
+### MA/DMC All index search: GET /search-engine/v1/search/{client}/all
+This endpoint returns search result from all indexes (movie, cast, genre, video)
+
+### MA/DMC movie search: GET /search-engine/v1/search/{client}/moie
+This endpoint returns search result from movie index
+
+### MA/DMC genre search: GET /search-engine/v1/search/{client}/genre
+This endpoint returns search result from genre index
+
+### MA/DMC cast search: GET /search-engine/v1/search/{client}/cast
+This endpoint returns search result from cast index
+
+### MA/DMC video clip search: GET /search-engine/v1/search/{client}/video
+This endpoint returns search result from video index
 
 
 ##Deployment
-Search api is dockerized.
+Search api is dockerized and terraformed.
 
-Use the following command to run the dojcker image. SPRING_PROFILES_ACTIV can be used to define the environment. Corresponding configuration is retrieved from spring config server based this variable. 
+Use the following command to run the docker image. SPRING_PROFILES_ACTIV can be used to define the environment. Corresponding configuration is retrieved from spring config server based this variable. 
 ```{r, engine='bash', count_lines}
 docker run -ti --net=host -d -p 8080:8080 -e profile=${var.search_profile} -e SERVER_PORT=8080 -e SPRING_CLOUD_CONFIG_URI=http://${var.search_profile}.recommender.config.server.wdsds.net:8888 chenp077/de-search-api-${var.search_profile}
 ```
+More details in deployment repo.
