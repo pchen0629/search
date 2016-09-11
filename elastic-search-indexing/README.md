@@ -3,8 +3,8 @@ Elastic Search Indexing is a spring batch job that gets movie metadata updates f
 
 ##How does it work
 There are two parts of this job:
-1. Reader: get updated movies from DMA catelog api for certain categories
-2. Writer: transform raw data to desired format and update indexes in near real time fashion via elastic search api
+* Reader: get updated movies from DMA catelog api for certain categories
+* Writer: transform raw data to desired format and update indexes in near real time fashion via elastic search api
 
 ##Deployment
 It is a daily job deployed on azkaban job scheduler.
