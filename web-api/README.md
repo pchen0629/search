@@ -9,8 +9,8 @@ It acts as a bridge between clients and elastic search server. The controller dy
 ### DMA Search GET /solr-dsaa/dmalive/select
 This method mimics solr response so that client could keep existing logic to interact as a solr client
 * Required param:
-q: search text
-fl: fields of result, must contain dsaa_guid
+** q: search text
+** fl: fields of result, must contain dsaa_guid
 * Optional param:
 rows: max number of results
 
