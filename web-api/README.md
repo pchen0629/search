@@ -9,15 +9,15 @@ It acts as a bridge between clients and elastic search server. The controller dy
 ### DMA Search GET /solr-dsaa/dmalive/select
 This method mimics solr response so that client could keep existing logic to interact as a solr client
 * Required param:
-1. q: search text
-2. fl: fields of result, must contain dsaa_guid
+q: search text
+fl: fields of result, must contain dsaa_guid
 * Optional param:
-1. rows: max number of results
+rows: max number of results
 
 ### MA/DMC All index search GET /search-engine/v1/search/{client}/all
 This method returns search result from all indexes (movie, cast, genre, video)
 * Required param:
-1. query: search string
+query: search string
 * Optional param:
 
 
