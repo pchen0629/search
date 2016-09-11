@@ -6,23 +6,23 @@ It acts as a bridge between clients and elastic search server. The controller dy
 
 
 ##Endpoints
-### DMA Search: GET /solr-dsaa/dmalive/select
-This endpoint mimics solr response so that client could keep existing logic to interact as a solr client
+* DMA Search: GET /solr-dsaa/dmalive/select
+This endpoint mimics solr response so that client could keep existing logic to interact as a solr client.
 
-### MA/DMC All index search: GET /search-engine/v1/search/{client}/all
-This endpoint returns search result from all indexes (movie, cast, genre, video)
+* MA/DMC All index search: GET /search-engine/v1/search/{client}/all
+This endpoint returns search result from all indexes (movie, cast, genre, video).
 
-### MA/DMC movie search: GET /search-engine/v1/search/{client}/moie
-This endpoint returns search result from movie index
+* MA/DMC movie search: GET /search-engine/v1/search/{client}/movie
+This endpoint returns search result from movie index.
 
-### MA/DMC genre search: GET /search-engine/v1/search/{client}/genre
-This endpoint returns search result from genre index
+* MA/DMC genre search: GET /search-engine/v1/search/{client}/genre
+This endpoint returns search result from genre index.
 
-### MA/DMC cast search: GET /search-engine/v1/search/{client}/cast
-This endpoint returns search result from cast index
+* MA/DMC cast search: GET /search-engine/v1/search/{client}/cast
+This endpoint returns search result from cast index.
 
-### MA/DMC video clip search: GET /search-engine/v1/search/{client}/video
-This endpoint returns search result from video index
+* MA/DMC video clip search: GET /search-engine/v1/search/{client}/video
+This endpoint returns search result from video index.
 
 
 ##Deployment
